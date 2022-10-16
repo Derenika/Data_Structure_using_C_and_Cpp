@@ -64,6 +64,25 @@
 
 // }
 
+// package main
+
+// import "fmt"
+
+// func fun(size int) []int {
+// 	B := make([]int, size)
+// 	for i := range B {
+// 		B[i] = 0
+// 	}
+// 	return B
+// }
+
+// func main() {
+// 	A := fun(5)
+// 	fmt.Println(A) //[0 0 0 0 0]
+// 	fmt.Printf("slice addr= %p, len= %d, cap= %d\n", &A, len(A), cap(A))
+// 	//slice addr= 0xc0000a8018, len= 5
+// }
+
 package main
 
 import "fmt"
@@ -71,14 +90,16 @@ import "fmt"
 func fun(size int) []int {
 	B := make([]int, size)
 	for i := range B {
-		B[i] = 0
+		B[i] = i + 1
 	}
 	return B
 }
 
 func main() {
-	A := fun(5)
-	fmt.Println(A) //[0 0 0 0 0]
-	fmt.Printf("slice addr= %p, len= %d, cap= %d\n", &A, len(A), cap(A))
-	//slice addr= 0xc0000a8018, len= 5
+	var A []int
+	n := 5
+	A = fun(n)
+	for i := 0; i < n; i++ {
+	}
+	fmt.Println(A)
 }
