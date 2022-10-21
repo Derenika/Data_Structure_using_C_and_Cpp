@@ -25,10 +25,12 @@ struct Rectangle
 };
 int main ()
 {
-    struct Rectangle *p;
-    p=(struct Rectangle *) malloc(sizeof (struct Rectangle));
+    struct Rectangle *p; // Create a pointer variable
+    p=(struct Rectangle *) malloc(sizeof (struct Rectangle)); //Allocating Memory in Heap
+    
     p -> length=10;
     p -> breadth=5;
+
     int Area = p -> length * p -> breadth;
     printf("%d", Area);
 }

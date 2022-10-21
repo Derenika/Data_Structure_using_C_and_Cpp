@@ -72,7 +72,7 @@ int* fun(int size)
     int *B;
     B = new int [size];
     for (int i = 0; i < size; i++)
-    B[i]=i+1; // 1 2 3 4 5
+    B[i]= i + 1; // 1 2 3 4 5
     return B;
  }
 int main ()

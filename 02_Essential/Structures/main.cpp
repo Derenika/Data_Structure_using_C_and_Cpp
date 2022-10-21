@@ -2,7 +2,7 @@
 #include <stdio.h>
 using namespace std;
 
-struct Rectangle // definition of the structure, it doesn't consume memory until you declare any variable of this type structure.
+struct Rectangle 
 {
     int length; 
     int breadth;

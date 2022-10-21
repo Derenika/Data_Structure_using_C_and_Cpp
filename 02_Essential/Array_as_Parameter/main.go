@@ -83,23 +83,47 @@
 // 	//slice addr= 0xc0000a8018, len= 5
 // }
 
+// package main
+
+// import "fmt"
+
+// func fun(size int) []int {
+// 	B := make([]int, size)
+// 	for i := range B {
+// 		B[i] = i + 1
+// 	}
+// 	return B
+// }
+
+// func main() {
+// 	var A []int
+// 	n := 5
+// 	A = fun(n)
+// 	for i := 0; i < n; i++ {
+// 	}
+// 	fmt.Println(A)
+// }
+
 package main
 
 import "fmt"
 
-func fun(size int) []int {
-	B := make([]int, size)
-	for i := range B {
-		B[i] = i + 1
-	}
-	return B
+type Rectangle struct {
+	length, breadth int
+}
+
+func Area(r Rectangle) int {
+	return r.length * r.breadth
+}
+
+func ChangeLength(p *Rectangle, l int) {
+	(*p).length = l
 }
 
 func main() {
-	var A []int
-	n := 5
-	A = fun(n)
-	for i := 0; i < n; i++ {
-	}
-	fmt.Println(A)
+	r := Rectangle{10, 5}
+	Area(r)
+	ChangeLength(&r, 20)
+	fmt.Printf("%d", Area(r)) //100
+	return
 }
