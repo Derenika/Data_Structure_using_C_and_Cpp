@@ -14,10 +14,7 @@ int main(){
  fun1(x);
 }
 
-// int main(){
-//  int x=3;
-//  fun1(x);
-// }
+
 
 // #include <stdio.h>
 // using namespace std;
@@ -30,4 +27,7 @@ int main(){
 //  }
 // }
 
-
+// int main(){
+//  int x=3;
+//  fun2(x);
+// }
